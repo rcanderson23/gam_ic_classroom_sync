@@ -1,7 +1,7 @@
 $classes = Import-Csv -Path .\gamclassinfo.csv -Header Term,Period,Course,Trial,SchooldID,TeacherEmail,StudentEmail
 $rosters = @{}
 
-
+#Fills the hash table $rosters with ClassName,Course object to be used later
 foreach($student in $classes) {
     $course_name = $student.Course -replace '\s',''
     $course_name = $course_name -replace '/','.'
@@ -26,6 +26,6 @@ foreach($student in $classes) {
 
 foreach($value in $rosters.Values){
     $fname = $value.CourseName
-    $value.Roster | Out-File .\classes\$fname.txt 
+    $value.Roster | Out-File .\classes\$fname.txt -Encoding utf8
     #gam command to sync command
 }

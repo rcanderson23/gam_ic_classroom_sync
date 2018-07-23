@@ -1,4 +1,4 @@
-﻿#MSSQL Connection and Query examples
+﻿# MSSQL Connection and places information into CSV file to be processed by setclassrooms.ps1
 . .\config.ps1
 $sqlcommand = "SELECT DISTINCT t.name as Term, p.Name as Period, c.name as Course, r.trialid as Trial, sch.schoolid as SchoolID, con.email as TeacherEmail, scon.email as StudentEmail
                FROM Section s

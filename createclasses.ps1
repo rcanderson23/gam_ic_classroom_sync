@@ -1,3 +1,5 @@
+# Creates classes in G Suite from CSV generated from getclasses.ps1
+
 $classes = Import-Csv -Path .\gamclassinfo.csv -Header Term,Period,Course,Trial,SchooldID,TeacherEmail,StudentEmail
 $courses = @{}
 
@@ -20,7 +22,5 @@ foreach($student in $classes) {
 }
 
 foreach($value in $courses.Values){
-    #$output = "Alias: {0}     CourseName: {1}       TeacherEmail: {2}       Section: {3}" -f $value.Alias,$value.CourseName,$value.TeacherEmail,$value.Section
-    #Write-Host $output
-    #gam command to sync command
+    C:\GAM\gam.exe create course alias $value.Alias name $value.CourseName section $value.Section teacher $value.TeacherEmail status ACTIVE
 }

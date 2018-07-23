@@ -3,7 +3,7 @@
 $classes = Import-Csv -Path .\gamclassinfo.csv -Header Term,Period,Course,Trial,SchooldID,TeacherEmail,StudentEmail
 $rosters = @{}
 
-
+#Fills the hash table $rosters with ClassName,Course object to be used later
 foreach($student in $classes) {
     $course_name = $student.Course -replace '\s',''
     $course_name = $course_name -replace '/','.'

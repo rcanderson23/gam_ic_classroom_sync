@@ -1,4 +1,4 @@
-gam\_ic\_course\_sync
+gam\_ic\_classroom\_sync
 =========================
 Consists of a few powershell scripts that query your Infinite Campus database for students in courses along with the teacher. It will then use GAM to create classes and sync the rosters to the classes automatically.
 

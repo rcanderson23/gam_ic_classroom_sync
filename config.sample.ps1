@@ -4,7 +4,7 @@ $password = "dbpassword"
 $dbserverstring = "db1.domain.tld,1234"
 $database = "dbname"
 $ConnectionString = "Server=$dbserverstring;Database=$database;User ID=$username;Password=$password;encrypt=true;trustServerCertificate=true"
-$sqlquery = "SELECT DISTINCT t.name as Term, p.Name as Period, c.name as Course, r.trialid as Trial, sch.schoolid as SchoolID, con.email as TeacherEmail, scon.email as StudentEmail
+$sqlquery = "SELECT DISTINCT t.name as Term, p.Name as Period, c.name as Course, r.trialid as Trial, sch.schoolid as SchoolID, con.email as TeacherEmail, scon.email as StudentEmail, s.sectionid as SectionID
                FROM Section s
                JOIN SectionPlacement sp ON s.sectionid = sp.sectionID
                JOIN Term t ON sp.termid = t.termid

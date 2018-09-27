@@ -7,7 +7,7 @@ Requirements
 * SqlServer Powershell Module 
 * [GAM](https://github.com/jay0lee/GAM)
 * ODBC connection to your Infinite Campus database
-* Student and Teacher emails stored in Infinite Campus
+* **Student and Teacher emails stored in Infinite Campus**
 
 
 Installation

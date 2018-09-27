@@ -1,3 +1,5 @@
 .vscode/
 config.ps1
 *.csv
+*.txt
+examples/GAMFunctions.psm1

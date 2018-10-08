@@ -18,4 +18,5 @@ $sqlquery = "SELECT DISTINCT t.name as Term, p.Name as Period, c.name as Course,
                JOIN Calendar cal ON c.calendarid = cal.calendarid
                JOIN School sch ON cal.schoolid = sch.schoolid
                JOIN Trial tr ON r.trialid = tr.trialid
-               WHERE tr.active = 1"
+               WHERE tr.active = 1
+               AND r.enddate IS NULL"

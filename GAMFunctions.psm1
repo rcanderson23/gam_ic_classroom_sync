@@ -19,7 +19,7 @@ function Get-ClassRosters {
     foreach($student in $classes) {
         $course_name = $student.Course -replace '\s',''
         $course_name = $course_name -replace '/','.'
-        $class_name = $course_name + "." + $student.Period + "." + $student.Term
+        $class_name = $course_name + "." + $student.Period + "." + $student.Term + "." + $student.SectionID
     
         if ($rosters.ContainsKey($class_name)){
             $new_class = $rosters[$class_name]
@@ -60,7 +60,7 @@ function Get-Classes {
     foreach($student in $classes) {
         $course_name = $student.Course -replace '\s',''
         $course_name = $course_name -replace '/','.'
-        $alias = $course_name + "." + $student.Period + "." + $student.Term
+        $alias = $course_name + "." + $student.Period + "." + $student.Term + "." + $student.SectionID
 
         #If the key doesn't exist create a course object and insert into the hash table
         if (-Not $courses.ContainsKey($alias)){

@@ -6,7 +6,7 @@ Import-Module "$PSScriptRoot\GAMFunctions" -Force
 
 # Make your SQL query and output it into a CSV file named gamclassinfo.csv
 $sql_response = Invoke-Sqlcmd -ConnectionString $ConnectionString -Query $sqlquery
-$sql_response | Export-Csv -path "$PSScriptRoot\example_gamclassinfo.csv" -NoTypeInformation -Header Term,Period,Course,Trial,SchoolID,TeacherEmail,StudentEmail,SectionID
+$sql_response | Export-Csv -path "$PSScriptRoot\example_gamclassinfo.csv" -NoTypeInformation 
 
 # Creates a hashtable of class rosters and stores it
 # You can modify this with the Term or SchoolID parameter
